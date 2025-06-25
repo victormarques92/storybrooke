@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
 import { useSearchParams } from 'react-router-dom';
 import { BookCard } from '../components/BookCard';
+import { Loading } from '../components/Loading';
 import { Search } from '../components/Search';
 import BaseLayout from '../layouts/BaseLayout';
 
@@ -36,9 +37,7 @@ export const Results = () => {
       <Search />
 
       {loading ? (
-        <div className="mt-6 flex justify-center">
-          <div className="border-primary h-8 w-8 animate-spin rounded-full border-4 border-t-transparent"></div>
-        </div>
+        <Loading />
       ) : (
         <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
           {results?.items.map(book => (

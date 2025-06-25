@@ -6,6 +6,7 @@ import toast from 'react-hot-toast';
 import { FaGooglePlay } from 'react-icons/fa';
 import { LuBookmarkCheck, LuBookmarkPlus } from 'react-icons/lu';
 import { useParams } from 'react-router-dom';
+import { Loading } from '../components/Loading';
 import BaseLayout from '../layouts/BaseLayout';
 import { useWishList } from '../stores/useWishList';
 
@@ -49,9 +50,7 @@ export const BookDetails = () => {
   return (
     <BaseLayout>
       {loading ? (
-        <div className="mt-6 flex justify-center">
-          <div className="border-primary h-8 w-8 animate-spin rounded-full border-4 border-t-transparent"></div>
-        </div>
+        <Loading />
       ) : (
         <div className="flex flex-col items-start gap-10 md:flex-row">
           <img

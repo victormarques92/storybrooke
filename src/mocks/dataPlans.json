@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Plano Básico",
+    "topics": ["Item 01", "Ítem 02"],
+    "price": 0,
+    "action": "Plano Básico"
+  },
+  {
+    "title": "Plano PRO",
+    "topics": ["Item 01", "Ítem 02", "Ítem 03"],
+    "price": 159.9,
+    "action": "Plano PRO"
+  },
+  {
+    "title": "Plano Premium+",
+    "topics": ["Item 01", "Ítem 02", "Ítem 03", "Ítem 04"],
+    "price": 99.9,
+    "action": "Plano Premium+"
+  }
+]

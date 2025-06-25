@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Kameron:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Montserrat', sans-serif;
+  --font-serif: 'Kameron', serif;
+
+  --color-primary: #d7a399;
+  --color-primary-light: #debbb4;
+  --color-primary-dark: #a65d44;
+}
+
+@layer base {
+  button {
+    @apply cursor-pointer;
+  }
+}

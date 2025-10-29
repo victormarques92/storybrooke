@@ -13,9 +13,15 @@ export const WishList = () => {
       <Search />
 
       <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
-        {getWishList()?.map(book => (
-          <BookCard key={book.id} book={book} />
-        ))}
+        {getWishList()?.length > 0 ? (
+          getWishList()?.map(book => <BookCard key={book.id} book={book} />)
+        ) : (
+          <div className="col-span-full">
+            <p className="text-center text-gray-500">
+              Você ainda não tem nenhum livro na sua lista de leitura
+            </p>
+          </div>
+        )}
       </div>
     </BaseLayout>
   );
